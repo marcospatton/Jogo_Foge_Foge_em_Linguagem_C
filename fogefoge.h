@@ -1,17 +1,19 @@
-void alocamapa();
-void lemapa();
-void liberamapa();
+#ifndef _FOGEFOGE_H_
+#define _FOGEFOGE_H_
+
+#define CIMA 'w'
+#define BAIXO 's'
+#define DIREITA 'd'
+#define ESQUERDA 'a'
+#define BOMBA 'b'
 
 int acabou();
 void move(char direcao);
-void imprimemapa();
+ 
+int ehdirecao(char direcao);
+void fantasmas();
+void explodepilula();
+void explodepilula2(int x, int y, int somax, int somay, int qtd);
 
 
-struct mapa {
-	char** matriz;
-	int linhas;
-	int colunas; 
-};
-
-
-typedef struct mapa MAPA;
+#endif
